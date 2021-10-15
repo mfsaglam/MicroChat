@@ -14,6 +14,8 @@
 		12852090271869D200D85A34 /* TextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285208F271869D200D85A34 /* TextFieldWithIcon.swift */; };
 		12852092271869F100D85A34 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12852091271869F100D85A34 /* MainButton.swift */; };
 		1285209427186C3F00D85A34 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285209327186C3F00D85A34 /* MessageBubble.swift */; };
+		12B31D342719A43600A8F5FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D332719A43600A8F5FA /* ChatView.swift */; };
+		12B31D362719A70100A8F5FA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D352719A70100A8F5FA /* MessagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		1285208F271869D200D85A34 /* TextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithIcon.swift; sourceTree = "<group>"; };
 		12852091271869F100D85A34 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		1285209327186C3F00D85A34 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		12B31D332719A43600A8F5FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		12B31D352719A70100A8F5FA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			children = (
 				128520812718634800D85A34 /* MicroChatApp.swift */,
 				128520832718634800D85A34 /* ContentView.swift */,
+				12B31D332719A43600A8F5FA /* ChatView.swift */,
+				12B31D352719A70100A8F5FA /* MessagesView.swift */,
 				1285208F271869D200D85A34 /* TextFieldWithIcon.swift */,
 				12852091271869F100D85A34 /* MainButton.swift */,
 				1285209327186C3F00D85A34 /* MessageBubble.swift */,
@@ -150,6 +156,8 @@
 				128520842718634800D85A34 /* ContentView.swift in Sources */,
 				1285209427186C3F00D85A34 /* MessageBubble.swift in Sources */,
 				12852090271869D200D85A34 /* TextFieldWithIcon.swift in Sources */,
+				12B31D362719A70100A8F5FA /* MessagesView.swift in Sources */,
+				12B31D342719A43600A8F5FA /* ChatView.swift in Sources */,
 				128520822718634800D85A34 /* MicroChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
