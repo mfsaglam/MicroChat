@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var password = ""
     var body: some View {
         VStack {
+            Spacer()
             Text("Welcome to MicroChat!")
                 .bold()
                 .padding(.bottom, 30)
@@ -23,17 +24,14 @@ struct ContentView: View {
                 .foregroundColor(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
                 .padding(.vertical, 30)
             MainButton(title: "Log in")
-            HStack(spacing: 5.0) {
-                Text("Don't have an account?")
-                    .font(.footnote)
-                    .foregroundColor(Color(.black))
-                .padding(.top, 30)
-                Text("Register")
-                    .bold()
-                    .font(.footnote)
-                    .foregroundColor(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
-                .padding(.top, 30)
-            }
+            Spacer()
+            Text("Don't have an account? ")
+                .font(.footnote)
+                .foregroundColor(Color(.black))
+            + Text("Register")
+                .bold()
+                .font(.footnote)
+                .foregroundColor(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
         }
     }
 }

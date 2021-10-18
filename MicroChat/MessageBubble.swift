@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct MessageBubble: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
     func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.size.width
-        let height = rect.size.height
-        path.move(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: width*0.9, y: 0))
-        path.addCurve(to: CGPoint(x: width, y: height*0.1), control1: CGPoint(x: width, y: 0), control2: CGPoint(x: width, y: height*0.1))
-        path.addLine(to: CGPoint(x: width, y: height*0.9))
-        path.addCurve(to: CGPoint(x: width*0.9, y: height), control1: CGPoint(x: width, y: height), control2: CGPoint(x: width*0.9, y: height))
-        path.addLine(to: CGPoint(x: width * 0.1, y: height))
-        path.addCurve(to: CGPoint(x: 0, y: height*0.9), control1: CGPoint(x: 0, y: height), control2: CGPoint(x: 0, y: height*0.9))
-        path.closeSubpath()
-        return path
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(MessageBubble(radius: radius, corners: corners) )
     }
 }
 
@@ -31,20 +31,20 @@ struct MessageBubble_Previews: PreviewProvider {
                 .foregroundColor(Color.white)
                 .padding()
                 .background(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
-                .clipShape(MessageBubble())
+                .clipShape(MessageBubble(radius: 25, corners: [.topRight, .bottomRight, .bottomLeft]))
                 .frame(maxWidth: 500)
                 .padding(.horizontal)
             Text("Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.")
                 .foregroundColor(Color.white)
                 .padding()
                 .background(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
-                .clipShape(MessageBubble())
+                .clipShape(MessageBubble(radius: 25, corners: [.topRight, .bottomRight, .bottomLeft]))
                 .padding(.horizontal)
             Text("Lorem ipsum dolor sit amet.")
                 .foregroundColor(Color.white)
                 .padding()
                 .background(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
-                .clipShape(MessageBubble())
+                .clipShape(MessageBubble(radius: 25, corners: [.topRight, .bottomRight, .bottomLeft]))
                 .padding(.horizontal)
         }
     }

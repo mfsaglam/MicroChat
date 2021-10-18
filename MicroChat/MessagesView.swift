@@ -9,21 +9,22 @@ import SwiftUI
 
 struct MessagesView: View {
     @State var messages = ["The beauty of the sunset was obscured by the industrial cranes.",
-                    "He was the only member of the club who didn't like plum pudding.",
-                    "The tattered work gloves speak of the many hours of hard labor he endured throughout his life.",
-                    "I am never at home on Sundays.",
-                   "It would have been a better night if the guys next to us weren't in the splash zone.",
-                    "I became paranoid that the school of jellyfish was spying on me.",
-                    "If I don’t like something, I’ll stay away from it.",
-                    "Red is greener than purple, for sure.",
-                    "He had reached the point where he was paranoid about being paranoid.",
-                    "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
-                    "The child’s favorite Christmas gift was the large box her father’s lawnmower came in.",
-                    "The beauty of the African sunset disguised the danger lurking nearby.",
-                    "She wanted to be rescued, but only if it was Tuesday and raining.",
-                    "She only paints with bold colors; she does not like pastels.",
-                    "I’m a living furnace."
+                           "He was the only member of the club who didn't like plum pudding.",
+                           "The tattered work gloves speak of the many hours of hard labor he endured throughout his life.",
+                           "I am never at home on Sundays.",
+                           "It would have been a better night if the guys next to us weren't in the splash zone.",
+                           "I became paranoid that the school of jellyfish was spying on me.",
+                           "If I don’t like something, I’ll stay away from it.",
+                           "Red is greener than purple, for sure.",
+                           "He had reached the point where he was paranoid about being paranoid.",
+                           "I used to live in my neighbor's fishpond, but the aesthetic wasn't to my taste.",
+                           "The child’s favorite Christmas gift was the large box her father’s lawnmower came in.",
+                           "The beauty of the African sunset disguised the danger lurking nearby.",
+                           "She wanted to be rescued, but only if it was Tuesday and raining.",
+                           "She only paints with bold colors; she does not like pastels.",
+                           "I’m a living furnace."
     ]
+    
     @State var message: String = ""
     var body: some View {
         VStack() {
