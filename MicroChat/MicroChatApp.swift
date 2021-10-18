@@ -11,7 +11,7 @@ import SwiftUI
 struct MicroChatApp: App {
     var body: some Scene {
         WindowGroup {
-            MessagesView()
+            ConversationsView()
         }
     }
 }

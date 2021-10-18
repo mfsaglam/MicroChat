@@ -16,6 +16,7 @@
 		1285209427186C3F00D85A34 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285209327186C3F00D85A34 /* MessageBubble.swift */; };
 		12B31D342719A43600A8F5FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D332719A43600A8F5FA /* ChatView.swift */; };
 		12B31D362719A70100A8F5FA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D352719A70100A8F5FA /* MessagesView.swift */; };
+		12D9CAEE271D9D3E00534BDA /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9CAED271D9D3E00534BDA /* ConversationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1285209327186C3F00D85A34 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		12B31D332719A43600A8F5FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		12B31D352719A70100A8F5FA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		12D9CAED271D9D3E00534BDA /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,10 @@
 			children = (
 				128520812718634800D85A34 /* MicroChatApp.swift */,
 				128520832718634800D85A34 /* ContentView.swift */,
+				12D9CAED271D9D3E00534BDA /* ConversationsView.swift */,
 				12B31D332719A43600A8F5FA /* ChatView.swift */,
 				12B31D352719A70100A8F5FA /* MessagesView.swift */,
-				1285208F271869D200D85A34 /* TextFieldWithIcon.swift */,
-				12852091271869F100D85A34 /* MainButton.swift */,
-				1285209327186C3F00D85A34 /* MessageBubble.swift */,
+				12D9CAEC271D9AB100534BDA /* Components */,
 				128520852718634B00D85A34 /* Assets.xcassets */,
 				128520872718634B00D85A34 /* Preview Content */,
 			);
@@ -80,6 +81,16 @@
 				128520882718634B00D85A34 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12D9CAEC271D9AB100534BDA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1285208F271869D200D85A34 /* TextFieldWithIcon.swift */,
+				12852091271869F100D85A34 /* MainButton.swift */,
+				1285209327186C3F00D85A34 /* MessageBubble.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				12852092271869F100D85A34 /* MainButton.swift in Sources */,
 				128520842718634800D85A34 /* ContentView.swift in Sources */,
 				1285209427186C3F00D85A34 /* MessageBubble.swift in Sources */,
+				12D9CAEE271D9D3E00534BDA /* ConversationsView.swift in Sources */,
 				12852090271869D200D85A34 /* TextFieldWithIcon.swift in Sources */,
 				12B31D362719A70100A8F5FA /* MessagesView.swift in Sources */,
 				12B31D342719A43600A8F5FA /* ChatView.swift in Sources */,

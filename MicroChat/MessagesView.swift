@@ -36,12 +36,11 @@ struct MessagesView: View {
                     ForEach(messages, id: \.self) { message in
                         LazyVStack(alignment: .leading) {
                             Text(message)
-                                .foregroundColor(Color.white)
+                                .foregroundColor(Color.black)
                                 .padding()
-                                .background(Color(#colorLiteral(red: 0.2431372549, green: 0.2, blue: 0.6666666667, alpha: 1)))
-                                .clipShape(MessageBubble())
+                                .background(Color(#colorLiteral(red: 0.9593952298, green: 0.9594177604, blue: 0.959405601, alpha: 1)))
+                                .clipShape(MessageBubble(radius: 15, corners: [.topRight, .bottomLeft, .bottomRight]))
                                 .padding(.horizontal)
-                            
                         }
                     }
                 }.onAppear {
@@ -52,7 +51,7 @@ struct MessagesView: View {
             }
             TextField("Write your message here...",text: $message)
                 .lineLimit(nil)
-                .padding()
+                .padding(15)
                 .background(
                     Capsule()
                         .opacity(0.04)

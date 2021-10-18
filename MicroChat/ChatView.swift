@@ -34,8 +34,9 @@ struct ChatView: View {
                     .padding(.trailing, 40)
                 Spacer()
             }
-            
+            MessagesView()
         }
+        .padding()
     }
 }
 
