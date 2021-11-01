@@ -31,7 +31,7 @@ struct MessagesView: View {
             Text("April 04, 2021")
                 .bold()
             .opacity(0.4)
-            ScrollViewReader { value in
+            ScrollViewReader { proxy in
                 ScrollView {
                     ForEach(messages, id: \.self) { message in
                         LazyVStack(alignment: .leading) {
@@ -41,14 +41,19 @@ struct MessagesView: View {
                                 .background(Color(#colorLiteral(red: 0.9593952298, green: 0.9594177604, blue: 0.959405601, alpha: 1)))
                                 .clipShape(MessageBubble(radius: 15, corners: [.topRight, .bottomLeft, .bottomRight]))
                                 .padding(.horizontal)
+                                .id(message)
                         }
                     }
-                }.onAppear {
-                    value.scrollTo(messages.last)
-                }.onChange(of: messages.count) { _ in
-                    value.scrollTo(messages.last)
+                }
+                .onAppear {
+                    proxy.scrollTo(messages.last, anchor: .bottom)
+                }.onChange(of: messages.count) { index in
+                    withAnimation(.spring()) {
+                        proxy.scrollTo(messages.last, anchor: .bottom)
+                    }
                 }
             }
+            
             TextField("Write your message here...",text: $message)
                 .lineLimit(nil)
                 .padding(15)
@@ -68,7 +73,9 @@ struct MessagesView: View {
                                     .font(.system(size: 20, weight: .bold))
                             )
                             .onTapGesture {
-                                messages.append(message)
+                                if !message.isEmpty {
+                                    messages.append(message)
+                                }
                                 message = ""
                             }
                     }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,11 @@
 		12852090271869D200D85A34 /* TextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285208F271869D200D85A34 /* TextFieldWithIcon.swift */; };
 		12852092271869F100D85A34 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12852091271869F100D85A34 /* MainButton.swift */; };
 		1285209427186C3F00D85A34 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285209327186C3F00D85A34 /* MessageBubble.swift */; };
+		12A3BC1627300A1F008FF356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12A3BC1527300A1F008FF356 /* GoogleService-Info.plist */; };
 		12B31D342719A43600A8F5FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D332719A43600A8F5FA /* ChatView.swift */; };
 		12B31D362719A70100A8F5FA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B31D352719A70100A8F5FA /* MessagesView.swift */; };
 		12D9CAEE271D9D3E00534BDA /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9CAED271D9D3E00534BDA /* ConversationsView.swift */; };
+		FA093F861E6492524B665187 /* Pods_MicroChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D481B4FA6349F0E9A22FBF68 /* Pods_MicroChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,13 @@
 		1285208F271869D200D85A34 /* TextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithIcon.swift; sourceTree = "<group>"; };
 		12852091271869F100D85A34 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		1285209327186C3F00D85A34 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		12A3BC1527300A1F008FF356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12B31D332719A43600A8F5FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		12B31D352719A70100A8F5FA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		12D9CAED271D9D3E00534BDA /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		99AFDD947038563E764D9FB9 /* Pods-MicroChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroChat.debug.xcconfig"; path = "Target Support Files/Pods-MicroChat/Pods-MicroChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A142DAC7FC9BD6D392B51376 /* Pods-MicroChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroChat.release.xcconfig"; path = "Target Support Files/Pods-MicroChat/Pods-MicroChat.release.xcconfig"; sourceTree = "<group>"; };
+		D481B4FA6349F0E9A22FBF68 /* Pods_MicroChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA093F861E6492524B665187 /* Pods_MicroChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +56,8 @@
 			children = (
 				128520802718634800D85A34 /* MicroChat */,
 				1285207F2718634800D85A34 /* Products */,
+				2E1EADCECE86E1914CFEBE06 /* Pods */,
+				B8DD2AE9A8C431C056996E80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +72,7 @@
 		128520802718634800D85A34 /* MicroChat */ = {
 			isa = PBXGroup;
 			children = (
+				12A3BC1527300A1F008FF356 /* GoogleService-Info.plist */,
 				128520812718634800D85A34 /* MicroChatApp.swift */,
 				128520832718634800D85A34 /* ContentView.swift */,
 				12D9CAED271D9D3E00534BDA /* ConversationsView.swift */,
@@ -93,6 +103,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		2E1EADCECE86E1914CFEBE06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99AFDD947038563E764D9FB9 /* Pods-MicroChat.debug.xcconfig */,
+				A142DAC7FC9BD6D392B51376 /* Pods-MicroChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B8DD2AE9A8C431C056996E80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D481B4FA6349F0E9A22FBF68 /* Pods_MicroChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1285208C2718634B00D85A34 /* Build configuration list for PBXNativeTarget "MicroChat" */;
 			buildPhases = (
+				71F6258A0B146BBBF5D84A9D /* [CP] Check Pods Manifest.lock */,
 				1285207A2718634800D85A34 /* Sources */,
 				1285207B2718634800D85A34 /* Frameworks */,
 				1285207C2718634800D85A34 /* Resources */,
+				C8B58B1CB6566EE04A4383AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +159,7 @@
 				};
 			};
 			buildConfigurationList = 128520792718634800D85A34 /* Build configuration list for PBXProject "MicroChat" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -153,10 +183,53 @@
 			files = (
 				128520892718634B00D85A34 /* Preview Assets.xcassets in Resources */,
 				128520862718634B00D85A34 /* Assets.xcassets in Resources */,
+				12A3BC1627300A1F008FF356 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71F6258A0B146BBBF5D84A9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MicroChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B58B1CB6566EE04A4383AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MicroChat/Pods-MicroChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MicroChat/Pods-MicroChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MicroChat/Pods-MicroChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1285207A2718634800D85A34 /* Sources */ = {
@@ -228,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,6 +368,7 @@
 		};
 		1285208D2718634B00D85A34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99AFDD947038563E764D9FB9 /* Pods-MicroChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +399,7 @@
 		};
 		1285208E2718634B00D85A34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A142DAC7FC9BD6D392B51376 /* Pods-MicroChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
