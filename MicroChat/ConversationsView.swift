@@ -17,12 +17,14 @@ struct ConversationsView: View {
                 ConversationsControlPanel()
                 ScrollView {
                     ForEach(0 ..< 5) { item in
-                        ConversationBubble()
-                            .padding(.horizontal, 30)
+                        NavigationLink(destination: ChatView()) {
+                            ConversationBubble()
+                                .padding(.horizontal, 30)
                             .shadow(color: Color.black.opacity(0.05), radius: 20, x: 0, y: 10)
+                        }
                     }
                 }
-                .padding(.bottom)
+                .padding(.bottom, 73)
             }
             VStack {
                 Spacer()
@@ -64,6 +66,7 @@ struct ConversationsView: View {
             }
         }
         .navigationTitle("Conversations")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
