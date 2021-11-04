@@ -34,6 +34,7 @@ struct MessagesView: View {
             if #available(iOS 15.0, *) {
                 ScrollViewReader { proxy in
                     ScrollView {
+                        //TODO: - Message ID scrools to previous same message when you append the exact same message to array. 
                         ForEach(messages, id: \.self) { message in
                             LazyVStack(alignment: .leading) {
                                 Text(message)
