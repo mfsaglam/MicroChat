@@ -27,59 +27,61 @@ struct MessagesView: View {
     
     @State var message: String = ""
     var body: some View {
-        VStack() {
+        VStack {
             Text("April 04, 2021")
                 .bold()
             .opacity(0.4)
-            ScrollViewReader { proxy in
-                ScrollView {
-                    ForEach(messages, id: \.self) { message in
-                        LazyVStack(alignment: .leading) {
-                            Text(message)
-                                .foregroundColor(Color.black)
-                                .padding()
-                                .background(Color(#colorLiteral(red: 0.9593952298, green: 0.9594177604, blue: 0.959405601, alpha: 1)))
-                                .clipShape(MessageBubble(radius: 15, corners: [.topRight, .bottomLeft, .bottomRight]))
-                                .padding(.horizontal)
-                                .id(message)
+            if #available(iOS 15.0, *) {
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        ForEach(messages, id: \.self) { message in
+                            LazyVStack(alignment: .leading) {
+                                Text(message)
+                                    .foregroundColor(Color.black)
+                                    .padding()
+                                    .background(Color(#colorLiteral(red: 0.9593952298, green: 0.9594177604, blue: 0.959405601, alpha: 1)))
+                                    .clipShape(MessageBubble(radius: 15, corners: [.topRight, .bottomLeft, .bottomRight]))
+                                    .padding(.horizontal)
+                                    .id(message)
+                            }
+                        }
+                    }
+                    .onAppear {
+                        proxy.scrollTo(messages.last, anchor: .bottom)
+                    }.onChange(of: messages.count) { index in
+                        withAnimation(.spring()) {
+                            proxy.scrollTo(messages.last, anchor: .bottom)
                         }
                     }
                 }
-                .onAppear {
-                    proxy.scrollTo(messages.last, anchor: .bottom)
-                }.onChange(of: messages.count) { index in
-                    withAnimation(.spring()) {
-                        proxy.scrollTo(messages.last, anchor: .bottom)
-                    }
-                }
-            }
-            
-            TextField("Write your message here...",text: $message)
-                .lineLimit(nil)
-                .padding(15)
-                .background(
-                    Capsule()
-                        .opacity(0.04)
-                )
-                .overlay(
-                    HStack {
-                        Spacer()
-                        Circle()
-                            .fill(Color.blue)
-                            .frame(width: 60)
-                            .overlay(
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size: 20, weight: .bold))
-                            )
-                            .onTapGesture {
-                                if !message.isEmpty {
-                                    messages.append(message)
-                                }
-                                message = ""
+                .safeAreaInset(edge: .bottom) {
+                    TextField("Write your message here...",text: $message)
+                        .lineLimit(nil)
+                        .padding(15)
+                        .background(.regularMaterial, in: Capsule())
+                        .overlay(
+                            HStack {
+                                Spacer()
+                                Circle()
+                                    .fill(Color.blue)
+                                    .frame(width: 60)
+                                    .overlay(
+                                        Image(systemName: "arrow.right")
+                                            .foregroundColor(Color.white)
+                                            .font(.system(size: 20, weight: .bold))
+                                    )
+                                    .onTapGesture {
+                                        if !message.isEmpty {
+                                            messages.append(message)
+                                        }
+                                        message = ""
+                                    }
                             }
-                    }
-                )
+                        )
+                }
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }
